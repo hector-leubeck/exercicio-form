@@ -1,12 +1,13 @@
 :root {
-    --primary-bg: #151822;
-    --secondary-bg: #242835;
-    --primary-color: #a6f750;
-    --secondary-color: #68b517
-    --third-color: #36491f;
-    --fourth-color: #50fc50
-    --light-effect-prim-color: #9ff500
-    --spacing-sm: 8px;
-    --spacing-md: 10px;
-    --spacing-lg: 14px;
-  }
+  --primary-bg: #151822;
+  --secondary-bg: #242835;
+  --primary-color: #a6f750;
+  --secondary-color: #68b517;
+  --third-color: #36491f;
+  --fourth-color: #50fc50;
+  --input-placeholder-color: #9ff500;
+  --input-font-color: #fdfdfd;
+  --spacing-sm: 8px;
+  --spacing-md: 10px;
+  --spacing-lg: 14px;
+}

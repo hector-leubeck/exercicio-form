@@ -3,17 +3,29 @@ h3 {
   font-weight: lighter;
 }
 
+input {
+  color: var(input-font-color);
+}
+
 body {
   background-color: var(--primary-bg);
   color: var(--primary-color);
   margin: var(--spacing-md) var(--spacing-sm);
 }
 
+::placeholder {
+  color: var(--input-placeholder-color);
+}
+
+input[type="date"]::placeholder {
+  color: var(--input-placeholder-color);
+}
+
 /* Animação do texto */
 
 @keyframes lights {
   0% {
-    color: var(light-effect-prim-color);
+    color: var(--input-placeholder-color);
     text-shadow: 0 0 1em rgba(255, 0, 170, 0.2),
       0 0 0.125em rgba(255, 51, 187, 0.3),
       -1em -0.125em 0.5em rgba(182, 243, 16, 0.295),
@@ -314,4 +326,72 @@ input::-webkit-outer-spin-button {
   border-radius: 20px;
   box-shadow: 5px 5px 5px #68b517;
   text-shadow: none;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 980px) {
+  header h1 {
+    font-size: 80px;
+  }
+
+  .form-container {
+    margin: 0 10px;
+    width: 98%;
+  }
+
+  .input-container input {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .complete-name legend,
+  .contact-infos legend,
+  .even-legend {
+    text-align: center;
+  }
+
+  fieldset {
+    width: 95%;
+    padding: 2%;
+  }
+
+  .complete-name,
+  .personal-info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .personal-container {
+    margin-top: 1.5rem;
+  }
+
+  .age {
+    width: 80px;
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 610px) {
+  header h1 {
+    font-size: 42px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .work-container,
+  .hobbies-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work-container {
+    gap: 1rem;
+  }
 }
