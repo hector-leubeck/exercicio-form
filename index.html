@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/colors.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="titlebar">
+      <h1 class="title">ADA Services</h1>
+    </header>
+    <main class="main-container">
+      <section class="form-container">
+        <fieldset class="complete-name">
+          <legend>Nome Completo</legend>
+          <div class="name input-container">
+            <label id="name-label" for="name-input">Nome</label>
+            <input
+              id="name-input"
+              type="text"
+              name="name"
+              autocomplete="name"
+              required
+              onchange="toggleFilled(this)"
+            />
+          </div>
+          <div class="secname input-container">
+            <label id="secname-label" for="secname-input">Nome do meio</label>
+            <input
+              id="secname-input"
+              type="text"
+              name="middlename"
+              onchange="toggleFilled(this)"
+            />
+          </div>
+          <div class="surname input-container">
+            <label id="surname-label" for="surname-input">Sobrenome</label>
+            <input
+              id="surname-input"
+              type="text"
+              name="lastname"
+              onchange="toggleFilled(this)"
+            />
+          </div>
+        </fieldset>
+        <fieldset class="personal-info">
+          <legend class="even-legend">Informações Pessoais</legend>
+          <div class="personal-container">
+            <label for="age">Idade</label>
+            <input
+              class="age"
+              id="age"
+              type="number"
+              name="age"
+              min="18"
+              max="100"
+            />
+          </div>
+          <div class="personal-container">
+            <label class="birthday-label" for="birthday"
+              >Data de Nascimento:</label
+            >
+            <div class="birthday-input">
+              <input
+                type="date"
+                id="birthday"
+                name="birthday"
+                min="1900-01-01"
+                max="2005-01-01"
+              />
+            </div>
+          </div>
+          <div class="gender-group">
+            <h3>Gênero:</h3>
+            <div class="options">
+              <label for="malegender">
+                <input type="radio" name="gender" id="malegender" />
+                Masculino
+              </label>
+              <label for="femalegender">
+                <input type="radio" name="gender" id="femalegender" />
+                Feminino
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="contact-infos">
+          <legend>Informações de contato</legend>
+          <div class="contact-container">
+            <div class="phone-container">
+              <label for="phone">Numero de telefone:</label>
+              <input
+                type="text"
+                name="phone"
+                autocomplete="tel"
+                id="phone"
+                pattern="[0-9]{2}-[9]{1}[0-9]{4}-[0-9]{4}"
+                placeholder="(00) 12345-6789"
+              />
+            </div>
+            <div class="email-container">
+              <label for="email">E-mail:</label>
+              <input
+                type="email"
+                name="mail"
+                id="email"
+                autocomplete="email"
+                placeholder="exemplo@exemplo.com.br"
+              />
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="work-infos">
+          <legend class="even-legend">Informações do serviço</legend>
+          <div class="work-container">
+            <div>
+              <label for="hour">Hora do atendimento:</label>
+              <input id="hour" type="time" min="07:00" max="17:00" />
+            </div>
+            <div>
+              <label for="color">Selecione sua cor preferida:</label>
+              <input id="color" type="color" />
+            </div>
+          </div>
+          <div class="hobbies-container">
+            <h3>Selecione seus Hobbies:</h3>
+            <div class="hobbies-options">
+              <div class="hobbies-group">
+                <div>
+                  <label for="hobby1">Jogos Eletronicos</label>
+                  <input type="checkbox" name="hobby1" id="hobby1" />
+                </div>
+                <div>
+                  <label for="hobby2">Futebol</label>
+                  <input type="checkbox" name="hobby2" id="hobby2" />
+                </div>
+                <div>
+                  <label for="hobby3">Corrida</label>
+                  <input type="checkbox" name="hobby3" id="hobby3" />
+                </div>
+              </div>
+              <div class="hobbies-group">
+                <div>
+                  <label for="hobby4">Filmes & Series</label>
+                  <input type="checkbox" name="hobby4" id="hobby4" />
+                </div>
+                <div>
+                  <label for="hobby5">Jogos de Tabuleiro</label>
+                  <input type="checkbox" name="hobby5" id="hobby5" />
+                </div>
+                <div>
+                  <label for="hobby6">Viagens</label>
+                  <input type="checkbox" name="hobby6" id="hobby6" />
+                </div>
+              </div>
+              <div class="hobbies-group">
+                <div>
+                  <label for="hobby7">Música</label>
+                  <input type="checkbox" name="hobby7" id="hobby7" />
+                </div>
+                <div>
+                  <label for="hobby8">Artes Marciais</label>
+                  <input type="checkbox" name="hobby8" id="hobby8" />
+                </div>
+                <div>
+                  <label for="hobby9">Dança & Artes</label>
+                  <input type="checkbox" name="hobby9" id="hobby9" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="buttons-container">
+          <input class="button" type="submit" value="Enviar" />
+          <input class="button" type="reset" value="Limpar dados" />
+        </div>
+      </section>
+    </main>
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>

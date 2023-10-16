@@ -1,0 +1,317 @@
+h3 {
+  font-family: "Times New Roman";
+  font-weight: lighter;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
+  margin: var(--spacing-md) var(--spacing-sm);
+}
+
+/* Animação do texto */
+
+@keyframes lights {
+  0% {
+    color: var(light-effect-prim-color);
+    text-shadow: 0 0 1em rgba(255, 0, 170, 0.2),
+      0 0 0.125em rgba(255, 51, 187, 0.3),
+      -1em -0.125em 0.5em rgba(182, 243, 16, 0.295),
+      1em 0.125em 0.5em rgba(27, 166, 23, 0.151);
+  }
+
+  30% {
+    color: var(--primary-color);
+    text-shadow: 0 0 1em rgba(204, 0, 255, 0.5),
+      0 0 0.125em rgba(255, 51, 187, 0.5),
+      -0.5em -0.125em 0.25em rgba(51, 255, 143, 0.219),
+      0.5em 0.125em 0.25em rgba(51, 187, 255, 0.4);
+  }
+
+  40% {
+    color: var(secondary-color);
+    text-shadow: 0 0 1em rgba(236, 47, 179, 0.5),
+      0 0 0.125em rgba(204, 47, 236, 0.5),
+      -0.25em -0.125em 0.125em rgba(245, 255, 102, 0.2),
+      0.25em 0.125em 0.125em rgba(102, 255, 247, 0.4);
+  }
+
+  70% {
+    color: var(--third-color);
+    text-shadow: 0 0 1em rgba(47, 176, 236, 0.5),
+      0 0 0.125em rgba(236, 47, 173, 0.5),
+      0.5em -0.125em 0.25em rgba(57, 228, 35, 0.2),
+      -0.5em 0.125em 0.25em rgba(2, 255, 86, 0.4);
+  }
+
+  100% {
+    color: var(--fourth-color);
+    text-shadow: 0 0 1em rgba(149, 223, 13, 0.2),
+      0 0 0.125em rgba(236, 47, 173, 0.3),
+      1em -0.125em 0.5em rgba(224, 39, 87, 0.192),
+      -1em 0.125em 0.5em rgba(57, 182, 78, 0.13);
+  }
+}
+
+h1 {
+  color: var(--primary-color);
+  padding-top: var(--spacing-lg);
+}
+
+header {
+  height: 12rem;
+  width: 100%;
+  background-color: var(--secondary-bg);
+}
+
+header h1 {
+  font-size: 120px;
+  text-align: center;
+  margin-top: 1rem;
+  animation: lights 5s 750ms linear infinite;
+}
+
+main {
+  display: flex;
+}
+
+/* Container Geral do Formulário */
+
+.form-container {
+  width: 75%;
+  margin: 1rem 5rem;
+}
+
+fieldset {
+  margin-top: 2rem;
+  border: none;
+  border-top: 1px solid #000;
+  border-color: var(--third-color);
+}
+
+.even-legend {
+  text-align: right;
+}
+
+/* Campo de nome */
+
+.complete-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+legend {
+  color: var(--fourth-color);
+  font-size: 26px;
+}
+
+.input-container {
+  margin-top: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 250px;
+  height: 30px;
+  background-color: var(--secondary-bg);
+  border: 1px solid --fourth-color;
+}
+
+.input-container label {
+  position: absolute;
+  pointer-events: none;
+  transform: translate(0, 23px) scale(1);
+  transform-origin: top left;
+  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  color: var(--primary-color);
+  font-size: 16px;
+  line-height: 25%;
+  left: 10px;
+}
+
+.input-container:focus-within label,
+.filled {
+  transform: translate(0, 12px) scale(0.8);
+  top: -25px;
+  z-index: 5;
+  color: var(--fourth-color);
+}
+
+/* Campo de Informações pessoais */
+
+.personal-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.personal-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Campo de Idade */
+
+input [type="number"] {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.age {
+  width: 150px;
+}
+
+/* Campo de Data de nascimento */
+
+.birthday-label {
+  width: 150px;
+}
+
+.birthday-input input[type="date"] {
+  padding: 10px;
+  border-radius: 5px;
+  width: 150px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.birthday-input input[type="date"]:focus {
+  border: 2px solid #a6f750;
+  box-shadow: 0 0 5px rgba(166, 247, 80, 0.7), 0 0 15px rgba(166, 247, 80, 0.3);
+}
+
+/* Campo de Gênero */
+
+.gender-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.gender-group h3 {
+  font-size: 16px;
+  margin: 10px;
+}
+
+.gender-group .options label {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Espaço entre as opções */
+  cursor: pointer;
+}
+
+.gender-group .options label .gender-group .options label {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--secondary-bg);
+  margin-right: 8px;
+}
+
+.gender-group .options label input[type="radio"] {
+  width: 10px;
+}
+
+.gender-group .options label input[type="radio"]:checked {
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Campo informações de contato */
+
+.contact-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Campo de agendamento do serviço */
+
+.work-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.work-container div {
+  display: flex;
+  align-items: center;
+}
+
+.work-container input {
+  width: 80px;
+  margin-left: 15px;
+}
+
+.hobbies-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hobbies-container input {
+  margin: 0 10px;
+  width: 20px;
+}
+
+.hobbies-options {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.hobbies-group {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+.hobbies-group div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: justify;
+}
+
+/* Botões de envio e reset */
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 2rem;
+  margin: 0 100px;
+}
+
+.button {
+  background: var(--secondary-bg);
+  color: var(--primary-color);
+  border: 1px solid #36491f;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #50fc50;
+  text-shadow: none;
+}
+
+.button:hover {
+  background: var(--fourth-color);
+  color: var(--primary-color);
+  border: 1px solid #a6f750;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #68b517;
+  text-shadow: none;
+}
